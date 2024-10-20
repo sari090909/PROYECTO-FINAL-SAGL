@@ -145,7 +145,7 @@ nav {
     white-space: nowrap;
     border-radius: 5px;
     box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
-    z-index: -1;
+    z-index: 1;
 }
 
 .header__image__card span {
@@ -176,6 +176,109 @@ nav {
     top: 70%;
     right: 0;
     transform: translate(-50%);
+}
+
+.header__content h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+    line-height: 5.5rem;
+    text-align: center;
+}
+
+.header__content h1 span {
+    color: var(--primary-color);
+}
+
+.header__content p {
+    margin-bottom: 2rem;
+    columns: var(--text-light);
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.header__content form {
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem 0;
+    border-radius: calc(1rem + 10px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header__content .input__row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.header__content .input__group {
+    flex: 1;
+}
+
+.header__content .input__group h5 {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.header__content .input__group > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__content input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+
+}
+
+.header__content input::placeholder {
+    font-weight: 600;
+    columns: var(--text-dark);
+}
+
+.header__content .input__group span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.header__content button {
+    width: 100%;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.header__content button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.header__content .bar {
+    font-size: .9rem;
+    color: var(--text-dark);
+    text-align: center;
+
 }
 
 @media (width > 480px) {
@@ -264,5 +367,25 @@ nav {
 
     .header__image {
         grid-area: 1/2/2/3;
+    }
+
+    .header__container {
+        padding-block: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .header__content :is(h1, p, .bar) {
+        text-align: left;
+    }
+}
+
+@media (width > 1024px) {
+    .header__content form {
+        flex-direction: row;
+    }
+
+    .header__content button {
+        width: fit-content;
     }
 }
