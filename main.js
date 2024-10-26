@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function redirectToRegister() {
-  window.location.href = "Ruta-Basica-Proyecto-Final/register.html";
+  window.location.href = "./register.html";
 }
 
 function redirectToLogin() {
-  window.location.href = "Ruta-Basica-Proyecto-Final/login.html";
+  window.location.href = "./login.html";
 }
 
 const menuBtn = document.getElementById('menu-btn');
