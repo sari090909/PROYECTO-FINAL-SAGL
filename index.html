@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/review.css">
-    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
 
     <title>Proyecto Final - Casa Loma Hotel</title>
 </head>
@@ -29,12 +28,16 @@
         </div>
         <ul class="nav__links" id="nav-links">
             <li><a href="#about__container">Nosotros</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Reseñas</a></li>
+            <li><a href="#services__container">Servicios</a></li>
+            <li><a href="#review__container">Reseñas</a></li>
         </ul>
-        <div class="nav__btns">
+        <div class="nav__btns" id="auth-buttons">
             <button onclick="redirectToRegister()" class="btn sign__up">Registrarse</button>
             <button onclick="redirectToLogin()" class="btn sign__in">Iniciar Sesión</button>
+        </div>
+        <div id="user-info" style="display: none;">
+            <span id="username"></span>
+            <button id="logout-btn">Log Out</button>
         </div>
     </nav>
     <header class="header__container">
@@ -60,9 +63,8 @@
         <div class="header__content">
             <h1>EL LUGAR IDEAL<br/>PARA <span>TU TIEMPO</span><br/> Y EVENTOS!</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ea corrupti veniam, 
-                voluptates numquam voluptatibus repellat debitis quia soluta in! Aliquid 
-                accusamus nisi provident
+                Disfruta, conoce y explora la belleza de la ciudad blanca 
+                mientras te hospedas en uno de los mejores hoteles de la ciudad.
             </p>
             <form action="/">
                 <div class="input__row">
@@ -87,9 +89,10 @@
     </header>
 
     <div class="container">
-        <div class="about__container">
+        <div class="about__container" id="about__container">
             <div class="about__izq">
                 <h2>Nosotros</h2>
+                <p>Conoce un poco de qué es Casa Loma <br></p>
                 <div class="about__btn">
                     <button class="btn">Reserva Ahora</button>
                 </div>
@@ -104,35 +107,43 @@
                     <h2>UN HOTEL DE ENSUEÑO</h2>
                     <h3>La mejor experiencia</h3>
                     <p>
-                      Designed for those who appreciate the fundamental joys of camping,
-                      our selection of basic tents offers comfort and reliability without
-                      unnecessary frills.
+                      Somos un hotel 4 estrellas con gran variedad de servicios para
+                      todos nuestros huespedes. Queremos ser parte tu visita a Popayán.
+                      Siéntete como en casa con nosotros.
                     </p>
                   </div>
             </div>
         </div>
 
-        <div class="services__container">
+        <div class="services__container" id="services__container">
+            <div class="services__content">
+                <h1>Contamos con<br /><span>Servicios Únicos</span></h1>
+                <p>
+                It encourages exploration of unfamiliar territories, embracing
+                diverse cultures and landscapes, while pursuing the desired
+                destination that captivates the heart and ignites a sense of wonder.
+                </p>
+                <button class="btn">BOOK NOW</button>
+            </div>
             <div class="destination__grid">
                 <div class="destination__card">
                 <img src="assets/brunch_foto.jpg" alt="destination" />
                 <div class="card__content">
-                    <h4>10 Must-Visit Hidden Gems</h4>
+                    <h4>Brunch y Cenas</h4>
                     <p>
-                    Discover off-the-beaten-path locations and hidden gems within
-                    dream destinations, taking you beyond the typical tourist spots.
+                    Prueba los mejores platillos en nuestra terraza con vistas a 
+                    al centro histórico de la ciudad. 
                     </p>
-                    <button class="btn">Read More</button>
+                    <button class="btn">Más info.</button>
                 </div>
                 </div>
                 <div class="destination__card">
                 <img src="assets/vino_foto.jpg" alt="destination" />
                 <div class="card__content">
-                    <h4>Immersive Cultural Experiences</h4>
+                    <h4>Cata de vinos</h4>
                     <p>
-                    Dive deep into the vibrant cultures of dream destinations,
-                    showcasing the rituals, traditions, and local customs that make
-                    these places truly unique.
+                    Todas las semanas tenemos eventos solo para nuestros huespedes
+                    entre ellas están buffets, catas de vinos y tours.
                     </p>
                     <button class="btn">Read More</button>
                 </div>
@@ -150,17 +161,8 @@
                 </div>
                 </div>
             </div>
-            <div class="services__content">
-                <h1>Contamos con<br /><span>Servicios Únicos</span></h1>
-                <p>
-                It encourages exploration of unfamiliar territories, embracing
-                diverse cultures and landscapes, while pursuing the desired
-                destination that captivates the heart and ignites a sense of wonder.
-                </p>
-                <button class="btn">BOOK NOW</button>
-            </div>
         </div>
-        <div class="section__container">
+        <div class="section__container" id="review__container">
             <div class="header">
               <p>Reseñas</p>
               <h1>La voz de nuestros huespedes</h1>
@@ -169,8 +171,8 @@
               <div class="card">
                 <span><i class="ri-double-quotes-l"></i></span>
                 <p>
-                  I've been working with these guys for a long time and I can say that
-                  my house is in the perfect hands.
+                  De los mejores lugares para visitas de negocios, cuenta con muy cómodos 
+                  espacios.
                 </p>
                 <hr />
                 <img src="assets/persona-1.jpg" alt="user" />
@@ -179,18 +181,18 @@
               <div class="card">
                 <span><i class="ri-double-quotes-l"></i></span>
                 <p>
-                  Working with Sentry Oak is just great, every problem in my house is
-                  solved in a matter of days.
+                  Un hotel ideal para la familia, a mi esposa le encantó la decoración y
+                  la cata de vinos.
                 </p>
                 <hr />
                 <img src="assets/person-2.jfif" alt="user" />
-                <p class="name">María Abad</p>
+                <p class="name">Mario Abad</p>
               </div>
               <div class="card">
                 <span><i class="ri-double-quotes-l"></i></span>
                 <p>
-                  Once a pipe burst in my kitchen and an hour later it was already
-                  repaired, thanks to Sentry Oak.
+                  El staff del lugar es muy amigable y servicial, te hacen sentir como
+                  en casa.
                 </p>
                 <hr />
                 <img src="assets/person-1.jfif" alt="user" />
@@ -212,8 +214,8 @@
             <div class="footer-content">
                 <h3>Síguenos</h3>
                 <ul class="social-icons">
-                 <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                 <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                 <li><a href="https://www.facebook.com/LuisJakeOficial/videos/casa-loma-hotel-rooftop-que-lugar-tan-especial/446476954776349/?_rdr"><i class="ri-facebook-circle-fill"></i></a></li>
+                 <li><a href="https://www.instagram.com/casaloma_popayan/?hl=es"><i class="ri-instagram-line"></i></a></li>
                 </ul>
             </div>
             <div class="bar">

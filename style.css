@@ -95,6 +95,19 @@ nav {
     display: none;
 }
 
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logout-btn {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
 .header__container {
     max-width: var(--max-width);
     margin: auto;

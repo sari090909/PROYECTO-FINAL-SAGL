@@ -15,11 +15,16 @@
 }
 
 .about__izq h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 4.5rem;
     color: var(--text-dark);
+}
+
+.about__izq p {
+  line-height: 4.5rem;
+  color: var(--text-dark);
 }
 
 .about__izq .btn {

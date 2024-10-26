@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const authButtons = document.getElementById('nav__btns');
+  const userInfo = document.getElementById('user-info');
+  const usernameSpan = document.getElementById('username');
+  const logoutBtn = document.getElementById('logout-btn');
+
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (currentUser) {
+      authButtons.style.display = 'none';
+      userInfo.style.display = 'flex';
+      usernameSpan.textContent = currentUser.name;
+
+      logoutBtn.addEventListener('click', function () {
+          localStorage.removeItem('currentUser');
+          window.location.reload();
+      });
+  }
+});
+
 function redirectToRegister() {
   window.location.href = "/html/register.html";
 }
@@ -70,19 +90,19 @@ ScrollReveal().reveal(".about__izq .container__btn", {
 
 ScrollReveal().reveal(".about__der h4", {
   ...scrollRevealOption,
-  delay: 2000,
+  delay: 1000,
 });
 ScrollReveal().reveal(".about__der h2", {
   ...scrollRevealOption,
-  delay: 2500,
+  delay: 1200,
 });
 ScrollReveal().reveal(".about__der h3", {
   ...scrollRevealOption,
-  delay: 3000,
+  delay: 1500,
 });
 ScrollReveal().reveal(".about__der p", {
   ...scrollRevealOption,
-  delay: 3500,
+  delay: 1600,
 });
 
 ScrollReveal().reveal(".about__der .tent-1", {
