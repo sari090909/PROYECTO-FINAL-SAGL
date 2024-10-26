@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function redirectToRegister() {
-  window.location.href = "/html/register.html";
+  window.location.href = "/register.html";
 }
 
 function redirectToLogin() {
-  window.location.href = "/html/login.html";
+  window.location.href = "/login.html";
 }
 
 const menuBtn = document.getElementById('menu-btn');
