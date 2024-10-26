@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('registerForm').addEventListener('submit', function (event) {
+    const form = document.getElementById('registerForm');
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -10,9 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const user = { name, lastname, email, password, gender };
 
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        localStorage.setItem(`user_${email}`, JSON.stringify(user));
+        // Retrieve the current users array or initialize a new one
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        
+        // Add the new user to the users array
+        users.push(user);
 
+        // Update localStorage with the new users array
+        localStorage.setItem('users', JSON.stringify(users));
+
+        // Automatically log in the user by setting a current user
+        localStorage.setItem('currentUser', JSON.stringify(user));
+
+        // Redirect to the landing page
         window.location.href = '/index.html';
     });
 });

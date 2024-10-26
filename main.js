@@ -2,6 +2,10 @@ function redirectToRegister() {
   window.location.href = "/register.html";
 }
 
+function redirectToLogin() {
+  window.location.href = "/login.html";
+}
+
 const menuBtn = document.getElementById('menu-btn');
 const navLinks = document.getElementById('nav-links');
 const menuBtnIcon = menuBtn.querySelector("i");
