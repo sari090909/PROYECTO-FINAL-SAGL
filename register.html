@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Registro Usuarios </title>
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Crea tu cuenta</div>
+        <div class="content">
+          <form id="registerForm">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Nombres</span>
+                <input type="text" id="name" placeholder="Ingresa tus nombres" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Apellidos</span>
+                <input type="text" id="lastname" placeholder="Ingresa tus apellidos" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" id="email" placeholder="Ingresa tu email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Contraseña</span>
+                <input type="password" id="password" placeholder="Ingresa tu password" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <span class="gender-title">Género</span>
+              <div class="category">
+                <input type="radio" name="gender" id="dot-1" value="Hombre">
+                <label for="dot-1">
+                  <span class="dot one"></span>
+                  <span class="gender">Hombre</span>
+                </label>
+                <input type="radio" name="gender" id="dot-2" value="Mujer">
+                <label for="dot-2">
+                  <span class="dot two"></span>
+                  <span class="gender">Mujer</span>
+                </label>
+                <input type="radio" name="gender" id="dot-3" value="Prefiero no decir">
+                <label for="dot-3">
+                  <span class="dot three"></span>
+                  <span class="gender">Prefiero no decir</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Registrar">
+            </div>
+          </form>
+        </div>
+      </div>
+  <script src="register.js"></script>
+</body>
+</html>
