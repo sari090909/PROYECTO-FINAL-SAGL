@@ -281,6 +281,10 @@ nav {
 
 }
 
+.bar {
+    color: var(--white);
+}
+
 @media (width > 480px) {
     nav {
         position: static;

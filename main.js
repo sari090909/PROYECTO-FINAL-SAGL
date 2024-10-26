@@ -1,9 +1,9 @@
 function redirectToRegister() {
-  window.location.href = "/register.html";
+  window.location.href = "/html/register.html";
 }
 
 function redirectToLogin() {
-  window.location.href = "/login.html";
+  window.location.href = "/html/login.html";
 }
 
 const menuBtn = document.getElementById('menu-btn');
