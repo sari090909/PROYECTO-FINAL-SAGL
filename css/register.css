@@ -125,8 +125,15 @@ form .category label .dot {
   border-color: var(--white);
 }
 
-form input[type="radio"] {
-  display: none;
+input[type="radio"] {
+    appearance: auto; /* Reset appearance to make sure it’s visible */
+}
+
+.category label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 form .button {

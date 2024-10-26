@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const authButtons = document.getElementById('nav__btns');
+  const authButtons = document.getElementById('auth-buttons');
   const userInfo = document.getElementById('user-info');
   const usernameSpan = document.getElementById('username');
   const logoutBtn = document.getElementById('logout-btn');

@@ -104,7 +104,7 @@ nav {
 #logout-btn {
     background-color: transparent;
     border: none;
-    color: red;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
